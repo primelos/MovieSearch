@@ -16,7 +16,7 @@ function App() {
     setSearchValue(inputValue)
     const API_KEY = process.env.REACT_APP_API_KEY
     const response = await fetch(
-      `http://www.omdbapi.com/?apikey=${API_KEY}&s=${inputValue}`
+      `https://www.omdbapi.com/?apikey=${API_KEY}&s=${inputValue}`
       )
       const data =  await response.json()
 

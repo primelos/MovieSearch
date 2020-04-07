@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./index.css";
+import { SearchContext } from "../Contexts";
+
+
 
 const SearchList = () => {
+  const { results,  handleMovieSelected } = useContext(SearchContext)
   return (
     <ul className="results">
-      <li>Results would show here</li>
+     {results.map((item, i) => {
+         return (
+           <li key={i} onClick={() => handleMovieSelected(item)}>
+             <img src={item.Poster} alt='movie poster' />
+             {item.Title}
+           </li>
+         )
+       })}
     </ul>
   );
 };

@@ -9,7 +9,8 @@ function MetaData() {
     <h3 className='movie-info'>{Title}</h3>
     <div className='movie-info'>
       <div className='info-section'>
-        <label>Type</label>
+        <label>Type </label>
+        {/* test */}
         <span>{Type}</span>
       </div>
       <div className='info-section'>
